@@ -58,13 +58,13 @@ string Program::getSourceLine(int lineNumber) {
     return source_line[lineNumber];    // Replace this stub with your own code
 }
 
-void Program::setParsedStatement(int lineNumber, Statement *stmt) {
-    // Replace this stub with your own code
-}
+//void Program::setParsedStatement(int lineNumber, Statement *stmt) {
+//    // Replace this stub with your own code
+//}
 
-Statement *Program::getParsedStatement(int lineNumber) {
-    return NULL;  // Replace this stub with your own code
-}
+//Statement *Program::getParsedStatement(int lineNumber) {
+//    return NULL;  // Replace this stub with your own code
+//}
 
 int Program::getFirstLineNumber() {
     auto i= this->source_line.begin();

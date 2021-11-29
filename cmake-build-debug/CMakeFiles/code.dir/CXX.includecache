@@ -19,6 +19,8 @@ parser.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/parser.h
 program.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/program.h
+statement.h
+/mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/statement.h
 ../StanfordCPPLib/error.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/StanfordCPPLib/error.h
 ../StanfordCPPLib/tokenscanner.h
@@ -51,8 +53,6 @@ exp.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/program.h
 string
 -
-statement.h
-/mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/statement.h
 exp.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/exp.h
 map
@@ -61,8 +61,16 @@ map
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/statement.h
 evalstate.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/evalstate.h
+../StanfordCPPLib/tokenscanner.h
+/mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/StanfordCPPLib/tokenscanner.h
 exp.h
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/exp.h
+parser.h
+/mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/parser.h
+program.h
+/mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/Basic/program.h
+string
+-
 
 /mnt/d/cys/SJTU/上课/程序设计/BASIC-Interpreter/BASIC-Interpreter-main/StanfordCPPLib/error.h
 string

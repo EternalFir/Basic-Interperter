@@ -53,23 +53,30 @@ CMakeFiles/code.dir/Basic/parser.cpp.o: ../StanfordCPPLib/vector.h
 
 CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/evalstate.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/exp.h
+CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/parser.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/program.cpp
 CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/program.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../Basic/statement.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/foreach.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/map.h
+CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/private/tokenpatch.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/stack.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/strlib.h
+CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/tokenscanner.h
 CMakeFiles/code.dir/Basic/program.cpp.o: ../StanfordCPPLib/vector.h
 
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/evalstate.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/exp.h
+CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/parser.h
+CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/program.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/statement.cpp
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../Basic/statement.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/foreach.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/map.h
+CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/private/tokenpatch.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/stack.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/strlib.h
+CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/tokenscanner.h
 CMakeFiles/code.dir/Basic/statement.cpp.o: ../StanfordCPPLib/vector.h
 
 CMakeFiles/code.dir/StanfordCPPLib/error.cpp.o: ../StanfordCPPLib/error.cpp

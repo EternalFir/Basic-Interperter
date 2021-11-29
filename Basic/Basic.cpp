@@ -10,6 +10,8 @@
 #include "exp.h"
 #include "parser.h"
 #include "program.h"
+#include "statement.h"
+
 #include "../StanfordCPPLib/error.h"
 #include "../StanfordCPPLib/tokenscanner.h"
 
@@ -186,50 +188,23 @@ void processLine(string line, Program &program, EvalState &state) {
             int value = stoi(r);
             state.setValue(l, value);
         } else if (sta == "GOTO" && ifrun) {
-            Expression *exp = parseExp(scanner);
-            int object_num = exp->eval(state);
-            if (program.source_line.find(object_num) == program.source_line.end()) {
+//            Expression *exp = parseExp(scanner);
+//            int object_num = exp->eval(state);
+            goto_statement goto_line(line);
+            goto_line.execute(state);
+            if (!goto_line.if_find(program)) {
                 cout << "LINE NUMBER ERROR" << endl;
             } else {
-                run_line_num = object_num;
+                run_line_num = goto_line.object_num;
             }
         } else if (sta == "IF" && ifrun) {
-            string raw_line = line;
-            int op_pos = 0;
-            while (raw_line[op_pos] != '=' && raw_line[op_pos] != '<' && raw_line[op_pos] != '>') {
-                op_pos++;
-            }
-            int if_pos=0;
-            while (raw_line.substr(if_pos,2)!= "IF")
-                if_pos++;
-            string l = raw_line.substr(if_pos+2, op_pos - 2-if_pos);
-            int r_end = op_pos;
-            while (raw_line.substr(r_end, 4) != "THEN")
-                r_end++;
-            string r = raw_line.substr(op_pos + 1, r_end - op_pos - 1);
-            TokenScanner scanner_temp;
-            scanner_temp.ignoreWhitespace();
-            scanner_temp.setInput(l);
-            Expression *exp_temp = parseExp(scanner_temp);
-            int l_value = exp_temp->eval(state);
-            scanner_temp.ignoreWhitespace();
-            scanner_temp.setInput(r);
-            exp_temp = parseExp(scanner_temp);
-            int r_value = exp_temp->eval(state);
-            string trush = scanner.nextToken();
-            while (trush != "THEN")
-                trush = scanner.nextToken();
-            Expression *exp = parseExp(scanner);
-            int object_num = exp->eval(state);
-            if (program.source_line.find(object_num) == program.source_line.end()) {
+            if_statement if_line(line);
+            if_line.execute(state);
+            if (!if_line.if_find(program))
                 cout << "LINE NUMBER ERROR" << endl;
-            } else {
-                if (raw_line[op_pos] == '=' && l_value == r_value)
-                    run_line_num = object_num;
-                else if (raw_line[op_pos] == '<' && l_value < r_value)
-                    run_line_num = object_num;
-                else if (raw_line[op_pos] == '>' && l_value > r_value)
-                    run_line_num = object_num;
+            else {
+               if(if_line.if_operate())
+                   run_line_num=if_line.object_num;
             }
         } else if (sta == "RUN" && !ifrun) {
             run_line_num = program.getFirstLineNumber();
@@ -277,6 +252,3 @@ bool ifinterger(string r) {
     return ans;
 }
 
-void run_program(Program program) {
-
-}

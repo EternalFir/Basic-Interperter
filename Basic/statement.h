@@ -13,7 +13,12 @@
 #define _statement_h
 
 #include "evalstate.h"
+#include "../StanfordCPPLib/tokenscanner.h"
 #include "exp.h"
+#include "parser.h"
+#include "program.h"
+#include <string>
+
 
 /*
  * Class: Statement
@@ -75,4 +80,51 @@ public:
  * specify its own destructor method to free that memory.
  */
 
+class if_statement : public Statement {
+public:
+    string raw_line;
+    int if_pos = 0;
+    int op_pos = 0;
+    int r_end = 0;
+    int l_value;
+    int r_value;
+    int object_num;
+    string l, r;
+    TokenScanner scanner_temp;
+
+    if_statement();
+
+    if_statement(string);
+
+    virtual ~if_statement();
+
+    virtual void execute(EvalState &state);
+
+    void get_pos();
+
+    void get_value(EvalState state);
+
+    bool if_find(Program program);
+
+    bool if_operate();
+};
+
+class goto_statement:public Statement{
+public:
+    int object_num;
+    TokenScanner scanner_temp;
+
+    goto_statement();
+
+    goto_statement(string);
+
+    virtual  ~goto_statement();
+
+    virtual void execute(EvalState &state);
+
+    bool if_find(Program program);
+
+};
 #endif
+
+

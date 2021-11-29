@@ -9,7 +9,7 @@
 #define _program_h
 
 #include <string>
-#include "statement.h"
+//#include "statement.h"
 #include "exp.h"
 #include<map>
 
@@ -108,7 +108,7 @@ public:
  * exists, the memory for that statement is reclaimed.
  */
 
-    void setParsedStatement(int lineNumber, Statement *stmt);
+//    void setParsedStatement(int lineNumber, Statement *stmt);
 
 /*
  * Method: getParsedStatement
@@ -119,7 +119,7 @@ public:
  * returns NULL.
  */
 
-    Statement *getParsedStatement(int lineNumber);
+//    Statement *getParsedStatement(int lineNumber);
 
 /*
  * Method: getFirstLineNumber
